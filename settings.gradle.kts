@@ -22,5 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CSC577GroupProject"
+rootProject.name = "SocialGoodVolunteerApp"
 include(":app")
+ 

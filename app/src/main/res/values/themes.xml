@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CSC577GroupProject" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SocialGoodVolunteerApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.CSC577GroupProject" parent="Base.Theme.CSC577GroupProject" />
+    <style name="Theme.SocialGoodVolunteerApp" parent="Base.Theme.SocialGoodVolunteerApp" />
 </resources>

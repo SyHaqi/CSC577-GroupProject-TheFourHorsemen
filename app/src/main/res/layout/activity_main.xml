@@ -1,19 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F5F9FF"
+    tools:context="com.haqi.csc577groupproject.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo" />
+
+            <!-- Right side: notification icon + logout button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnNotification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_white_bg"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:contentDescription="Notifications"
+                    android:padding="8dp"
+                    android:layout_marginEnd="10dp" />
+
+                <!-- Logout icon button — same circle style as notification -->
+                <ImageButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_white_bg"
+                    android:src="@drawable/logout"
+                    android:contentDescription="Logout"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- PROFILE SECTION — avatar, username, email  -->
+        <!-- ═══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <!-- Avatar circle -->
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/avatar"
+                android:contentDescription="Avatar"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:background="@drawable/circle_crop_avatar"
+                android:layout_marginEnd="20dp" />
+
+            <!-- Username + email -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USERNAME"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:textSize="13sp"
+                    android:textColor="#B3E5FC" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- White card body below the blue header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- ══════════════════════════════════════ -->
+            <!-- SERVICE SECTION                        -->
+            <!-- ══════════════════════════════════════ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="8dp"
+                android:text="Service"
+                android:textColor="#1A1A1A"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- Thin divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="#E0E0E0" />
+
+            <!-- Row: RideShare -->
+            <LinearLayout
+                android:id="@+id/rowRideShare"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:contentDescription="RideShare Icon"
+                    android:padding="6dp"
+                    android:src="@drawable/icon1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RideShare"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Row: DeliveryFood -->
+            <LinearLayout
+                android:id="@+id/rowDeliveryFood"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:contentDescription="Delivery Icon"
+                    android:padding="6dp"
+                    android:src="@drawable/icon2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DeliveryFood"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Row: Semester Break Storage -->
+            <LinearLayout
+                android:id="@+id/rowStorage"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:contentDescription="Storage Icon"
+                    android:padding="6dp"
+                    android:src="@drawable/icon3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester Break Storage"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════ -->
+            <!-- SETTING SECTION                        -->
+            <!-- ══════════════════════════════════════ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="8dp"
+                android:text="Setting"
+                android:textColor="#1A1A1A"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- Thin divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="#E0E0E0" />
+
+            <!-- Row: Update Profile -->
+            <LinearLayout
+                android:id="@+id/rowUpdateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:contentDescription="Profile Icon"
+                    android:padding="6dp"
+                    android:src="@drawable/icon4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Profile"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
