@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.haqi.csc577groupproject.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/blue_primary"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="72dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/logo"
+                android:contentDescription="App Logo" />
+
+            <ImageButton
+                android:id="@+id/btnNotification"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/circle_white_bg"
+                android:contentDescription="Notifications"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_dialog_email" />
+
+        </RelativeLayout>
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Good morning,"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Username Field -->
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3E5FC"
+            android:background="@null"
+            android:layout_marginBottom="4dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Underline divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3E5FC"
+            android:background="@null"
+            android:layout_marginBottom="4dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Underline divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Login Button (pill-shaped, centred) -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="loginClicked"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null" />
+
+        <!-- Register link -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register here"
+                android:textColor="#000053"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="?attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Section label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Announcement"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Horizontally scrollable announcement cards -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Card 1 -->
+
+                <!-- Card 2 -->
+
+                <ImageView
+                    android:id="@+id/anc1"
+                    android:layout_width="220dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/card_rounded"
+                    android:clipToOutline="true"
+                    android:contentDescription="Announcement 1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anc1" />
+
+                <ImageView
+                    android:id="@+id/anc2"
+                    android:layout_width="220dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/anc2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Announcement 2"
+                    android:background="@drawable/card_rounded"
+                    android:clipToOutline="true" />
+
+                <!-- Card 3 -->
+                <ImageView
+                    android:id="@+id/anc3"
+                    android:layout_width="240dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/anc3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Announcement 3"
+                    android:background="@drawable/card_rounded"
+                    android:clipToOutline="true" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
