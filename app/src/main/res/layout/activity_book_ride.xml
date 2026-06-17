@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:id="@+id/bookRideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/bookRideTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Ride"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/rideDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ride Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/rideDetailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EEEEEE"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/driverNameTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Driver: Ali"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/originTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From: UiTM Puncak Perdana"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/destinationTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To: Shah Alam"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/departureTimeTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Departure: 5:30 PM"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/availableSeatsTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Seats: 3"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bookingDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/bookingDetailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EEEEEE"
+            android:padding="15dp"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:id="@+id/passengerNameTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passenger: Syed Baihaqi"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/seatBookTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seat to book: 1"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmBookingButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Booking"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/cancelBookingButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</ScrollView>
