@@ -32,16 +32,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
-        if (!spm.isLoggedIn()) {
-            finish();
-            startActivity(new Intent(this, LoginActivity.class));
-            return;
-        }
+        // TEMPORARY DISABLE LOGIN CHECK FOR TESTING
+        // SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
+        // if (!spm.isLoggedIn()) {
+        //     finish();
+        //     startActivity(new Intent(this, LoginActivity.class));
+        //     return;
+        // }
 
-        User user = spm.getUser();
-        ((TextView) findViewById(R.id.tvUsername)).setText(user.getUsername().toUpperCase());
-        ((TextView) findViewById(R.id.tvEmail)).setText(user.getEmail());
+        // TEMPORARY HARDCODED USER DISPLAY
+        ((TextView) findViewById(R.id.tvUsername)).setText("TEST USER");
+        ((TextView) findViewById(R.id.tvEmail)).setText("test@gmail.com");
+
+//        User user = spm.getUser();
+//        ((TextView) findViewById(R.id.tvUsername)).setText(user.getUsername().toUpperCase());
+//        ((TextView) findViewById(R.id.tvEmail)).setText(user.getEmail());
 
         // Notification bell
         ImageButton btnNotification = findViewById(R.id.btnNotification);
@@ -58,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         });
 
+        // temporary spm for logout
+        SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
         // Logout
         ImageButton btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> {
@@ -68,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // RideShare — blank activity (handled by friend)
+        // ViewRide
         ((LinearLayout) findViewById(R.id.rowRideShare)).setOnClickListener(v ->
-                startActivity(new Intent(this, RideShareActivity.class)));
+                startActivity(new Intent(MainActivity.this, ViewRidesActivity.class)));
 
         // DeliveryFood — show cs.png popup
         ((LinearLayout) findViewById(R.id.rowDeliveryFood)).setOnClickListener(v ->

@@ -2,130 +2,167 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA">
+    android:background="#F5F9FF">
 
     <LinearLayout
         android:id="@+id/bookRideLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/bookRideTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Book Ride"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp" />
-
-        <TextView
-            android:id="@+id/rideDetailsTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ride Details"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
-
+        <!-- Blue Header -->
         <LinearLayout
-            android:id="@+id/rideDetailsCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:orientation="vertical"
-            android:background="#EEEEEE"
-            android:padding="15dp"
-            android:layout_marginBottom="20dp">
+            android:gravity="center_vertical"
+            android:background="@color/blue_primary"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
 
             <TextView
-                android:id="@+id/driverNameTextViewID"
+                android:id="@+id/bookRideTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Driver: Ali"
-                android:textSize="17sp"
-                android:layout_marginBottom="8dp" />
+                android:text="Book Ride"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/originTextViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="From: UiTM Puncak Perdana"
-                android:textSize="17sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/destinationTextViewID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="To: Shah Alam"
-                android:textSize="17sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/departureTimeTextViewID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Departure: 5:30 PM"
-                android:textSize="17sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/availableSeatsTextViewID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Available Seats: 3"
-                android:textSize="17sp" />
+                android:text="Confirm your ride details before booking"
+                android:textColor="#B3E5FC"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/bookingDetailsTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Booking Details"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
-
         <LinearLayout
-            android:id="@+id/bookingDetailsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#EEEEEE"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp">
+            android:padding="20dp">
 
             <TextView
-                android:id="@+id/passengerNameTextViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Passenger: Syed Baihaqi"
-                android:textSize="17sp"
-                android:layout_marginBottom="8dp" />
+                android:text="Ride Details"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/rideDetailsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="16dp"
+                android:layout_marginBottom="18dp">
+
+                <TextView
+                    android:id="@+id/driverNameTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Driver: Ali"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/originTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="From: UiTM Puncak Perdana"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/destinationTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To: Shah Alam"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/departureTimeTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Departure: 5:30 PM"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/availableSeatsTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available Seats: 3"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/seatBookTextViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Seat to book: 1"
-                android:textSize="17sp" />
+                android:text="Booking Details"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/bookingDetailsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/passengerNameTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Passenger: Syed Baihaqi"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/seatBookTextViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seat to book: 1"
+                    android:textSize="16sp"
+                    android:textColor="#1A1A1A" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirmBookingButtonID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Booking"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/blue_primary"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/cancelBookingButtonID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/blue_primary"
+                android:backgroundTint="#E3F2FD" />
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/confirmBookingButtonID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Confirm Booking"
-            android:layout_marginBottom="10dp" />
-
-        <Button
-            android:id="@+id/cancelBookingButtonID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cancel" />
 
     </LinearLayout>
 
