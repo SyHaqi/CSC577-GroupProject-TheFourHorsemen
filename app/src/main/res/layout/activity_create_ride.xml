@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createRideLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Blue Header Block -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@color/blue_primary"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Offer a Ride"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Share your trip details with students"
+            android:textColor="#B3E5FC"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Scrollable Input Form Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp">
+
+            <!-- Origin Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From (Departure Location)"
+                android:textSize="12sp"
+                android:textColor="#90A4AE"
+                android:layout_marginBottom="2dp" />
+
+            <EditText
+                android:id="@+id/edtOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="e.g. UiTM Puncak Perdana"
+                android:inputType="text"
+                android:paddingBottom="8dp"
+                android:textColor="#1A1A1A"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Destination Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To (Destination)"
+                android:textSize="12sp"
+                android:textColor="#90A4AE"
+                android:layout_marginBottom="2dp" />
+
+            <EditText
+                android:id="@+id/edtDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="e.g. Shah Alam"
+                android:inputType="text"
+                android:paddingBottom="8dp"
+                android:textColor="#1A1A1A"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Time and Date Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure Time"
+                android:textSize="12sp"
+                android:textColor="#90A4AE"
+                android:layout_marginBottom="2dp" />
+
+            <EditText
+                android:id="@+id/edtTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="e.g. 5:30 PM"
+                android:inputType="text"
+                android:paddingBottom="8dp"
+                android:textColor="#1A1A1A"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Available Seats Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Seats"
+                android:textSize="12sp"
+                android:textColor="#90A4AE"
+                android:layout_marginBottom="2dp" />
+
+            <EditText
+                android:id="@+id/edtSeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="e.g. 4"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:textColor="#1A1A1A"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Main Submit Button Layout -->
+            <Button
+                android:id="@+id/btnPublishRide"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Publish Ride"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/blue_primary"
+                android:stateListAnimator="@null" />
+
+            <!-- New Navigation Link to Dashboard Cockpit -->
+            <Button
+                android:id="@+id/btnNavToViewMyRides"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="View My Created Rides"
+                android:textColor="#1565C0"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

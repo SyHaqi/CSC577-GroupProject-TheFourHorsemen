@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         ((LinearLayout) findViewById(R.id.rowStorage)).setOnClickListener(v ->
                 showComingSoonPopup());
 
+        ((LinearLayout) findViewById(R.id.rowDriverHub)).setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, CreateRideActivity.class)));
+
         // Settings
         ((LinearLayout) findViewById(R.id.rowUpdateProfile)).setOnClickListener(v ->
                 startActivity(new Intent(this, UpdateProfileActivity.class)));
