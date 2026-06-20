@@ -1,0 +1,36 @@
+package com.haqi.csc577groupproject;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class ViewBookingActivity extends AppCompatActivity {
+
+    private Button btnBookNow;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_view_booking);
+
+        // Bind layout views
+        btnBookNow = findViewById(R.id.btnBookNow);
+
+        btnBookNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewBookingActivity.this, ViewRidesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+}

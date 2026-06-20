@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Booking"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/cancelbook"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Details"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Reservation - 20/06/2026"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason for Cancellation"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change of Plans"/>
+
+        <RadioButton
+            android:id="@+id/rbTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrong Time Selected"/>
+
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter reason"/>
+
+    <Button
+        android:id="@+id/btnConfirmCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Cancellation"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

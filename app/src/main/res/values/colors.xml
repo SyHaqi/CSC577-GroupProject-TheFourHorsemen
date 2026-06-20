@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue_primary">#1565C0</color>
     <color name="blue_light">#42A5F5</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#000000</color>
+    <color name="divider">#00BCD4</color>
 </resources>

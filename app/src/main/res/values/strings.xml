@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SocialGoodVolunteerApp</string>
+    <string name="title_my_bookings">My Booking</string>
+    <string name="empty_state_icon_desc">\?</string>
+    <string name="book_now">Book Now!</string>
+    <string name="past_bookings">Past Booking</string>
+    <string name="filter_icon_desc">\?</string>
+    <string name="operator_icon_desc">\?</string>
+    <string name="passenger_icon_desc">\?</string>
 </resources>
