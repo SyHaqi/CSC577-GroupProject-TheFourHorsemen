@@ -21,6 +21,12 @@ public class ViewBookingActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_view_booking);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.viewBooking), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
         // Bind layout views
         btnBookNow = findViewById(R.id.btnBookNow);
 

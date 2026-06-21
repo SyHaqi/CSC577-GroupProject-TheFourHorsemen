@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -50,4 +51,6 @@ dependencies {
 
     // Gson — needed by LoginActivity for FailLogin parsing
     implementation("com.google.code.gson:gson:2.10.1")
+
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
 }

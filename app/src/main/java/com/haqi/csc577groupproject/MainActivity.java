@@ -79,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
         ((LinearLayout) findViewById(R.id.rowRideShare)).setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, ViewRidesActivity.class)));
 
+        // View My Bookings
+        ((LinearLayout) findViewById(R.id.rowViewMyBookings)).setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ViewBookingActivity.class)));
+
         // DeliveryFood — show cs.png popup
         ((LinearLayout) findViewById(R.id.rowDeliveryFood)).setOnClickListener(v ->
                 showComingSoonPopup());

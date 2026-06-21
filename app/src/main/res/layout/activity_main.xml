@@ -170,6 +170,35 @@
 
             </LinearLayout>
 
+            <!-- Row: View My Bookings -->
+            <LinearLayout
+                android:id="@+id/rowViewMyBookings"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:contentDescription="View My Bookings Icon"
+                    android:padding="6dp"
+                    android:src="@android:drawable/ic_menu_agenda" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View My Bookings"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
             <!-- Row: DeliveryFood -->
             <LinearLayout
                 android:id="@+id/rowDeliveryFood"
