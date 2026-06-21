@@ -41,12 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/ic_launcher_background"
+            android:backgroundTint="@color/blue_primary"
             android:elevation="0dp"
             android:stateListAnimator="@null"
             android:text="@string/book_now"
             android:textAllCaps="false"
-            android:textColor="@color/text_primary"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
 

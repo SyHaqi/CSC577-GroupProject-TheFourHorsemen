@@ -74,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Confirm Cancellation"
+        android:backgroundTint="@color/blue_primary"
         android:layout_marginTop="20dp"/>
 
 </LinearLayout>
