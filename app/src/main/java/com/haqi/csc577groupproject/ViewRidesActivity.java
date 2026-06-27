@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.haqi.csc577groupproject.adapter.RideAdapter;
-import com.haqi.csc577groupproject.model.Ride;
+import com.haqi.csc577groupproject.Ride;
 import com.haqi.csc577groupproject.model.User;
 import com.haqi.csc577groupproject.remote.ApiUtils;
 import com.haqi.csc577groupproject.remote.RideService;

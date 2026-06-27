@@ -1,6 +1,6 @@
 package com.haqi.csc577groupproject.remote;
 
-import com.haqi.csc577groupproject.model.Ride;
+import com.haqi.csc577groupproject.Ride;
 
 import java.util.List;
 

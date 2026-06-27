@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.haqi.csc577groupproject.BookRideActivity;
 import com.haqi.csc577groupproject.R;
-import com.haqi.csc577groupproject.model.Ride;
+import com.haqi.csc577groupproject.Ride;
 
 import java.util.List;
 
