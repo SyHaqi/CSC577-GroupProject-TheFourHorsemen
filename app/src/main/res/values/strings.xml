@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SocialGoodVolunteerApp</string>
+    <string name="app_name">RideShare</string>
     <string name="title_my_bookings">My Booking</string>
     <string name="empty_state_icon_desc">\?</string>
     <string name="book_now">Book Now!</string>
