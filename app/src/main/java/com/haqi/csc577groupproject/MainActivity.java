@@ -15,7 +15,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.haqi.csc577groupproject.R;
 import com.haqi.csc577groupproject.model.User;
 import com.haqi.csc577groupproject.sharedpref.SharedPrefManager;
 
@@ -32,21 +31,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // TEMPORARY DISABLE LOGIN CHECK FOR TESTING
-        // SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
-        // if (!spm.isLoggedIn()) {
-        //     finish();
-        //     startActivity(new Intent(this, LoginActivity.class));
-        //     return;
-        // }
 
-        // TEMPORARY HARDCODED USER DISPLAY
-        ((TextView) findViewById(R.id.tvUsername)).setText("TEST USER");
-        ((TextView) findViewById(R.id.tvEmail)).setText("test@gmail.com");
+         SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
+         if (!spm.isLoggedIn()) {
+             finish();
+             startActivity(new Intent(this, LoginActivity.class));
+             return;
+         }
 
-//        User user = spm.getUser();
-//        ((TextView) findViewById(R.id.tvUsername)).setText(user.getUsername().toUpperCase());
-//        ((TextView) findViewById(R.id.tvEmail)).setText(user.getEmail());
+        User user = spm.getUser();
+        ((TextView) findViewById(R.id.tvUsername)).setText(user.getUsername().toUpperCase());
+        ((TextView) findViewById(R.id.tvEmail)).setText(user.getEmail());
 
         // Notification bell
         ImageButton btnNotification = findViewById(R.id.btnNotification);
@@ -63,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         });
 
-        // temporary spm for logout
-        SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
+
         // Logout
         ImageButton btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> {

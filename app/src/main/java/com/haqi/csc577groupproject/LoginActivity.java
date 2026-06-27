@@ -84,32 +84,25 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         public void loginClicked(View view) {
-//                String username = edtUsername.getText().toString();
-//                String password = edtPassword.getText().toString();
-//                if (validateLogin(username, password)) {
-//                        doLogin(username, password);
-//                }
-                String username = edtUsername.getText().toString().trim();
-                String password = edtPassword.getText().toString().trim();
 
+                // get username and password entered by user
+                String username = edtUsername.getText().toString();
+                String password = edtPassword.getText().toString();
+
+                // validate form, make sure it is not empty
                 if (validateLogin(username, password)) {
-
-                        // TEMPORARY HARDCODED LOGIN FOR TESTING
-                        if (username.equals("test") && password.equals("123")) {
-                                displayToast("Test login successful");
-
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                startActivity(intent);
-                                finish();
-
-                                return;
-                        }
-
-                        // Real API login
+                        // if not empty, login using REST API
                         doLogin(username, password);
                 }
+
         }
 
+        /**
+         * Call REST API to login
+         *
+         * @param username username
+         * @param password password
+         */
 
         private void doLogin(String username, String password) {
                 UserService userService = ApiUtils.getUserService();

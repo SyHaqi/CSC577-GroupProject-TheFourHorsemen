@@ -1,6 +1,8 @@
 package com.haqi.csc577groupproject;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +12,25 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.haqi.csc577groupproject.adapter.RideAdapter;
 import com.haqi.csc577groupproject.model.Ride;
+import com.haqi.csc577groupproject.model.User;
+import com.haqi.csc577groupproject.remote.ApiUtils;
+import com.haqi.csc577groupproject.remote.RideService;
+import com.haqi.csc577groupproject.sharedpref.SharedPrefManager;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ViewRidesActivity extends AppCompatActivity {
 
+    private RideService rideService;
+    private RideAdapter adapter;
+    private ArrayList<Ride> rides = new ArrayList<>();
     RecyclerView rvRides;
 
     @Override
@@ -31,28 +46,40 @@ public class ViewRidesActivity extends AppCompatActivity {
         });
 
         rvRides = findViewById(R.id.rvRides);
-
-        ArrayList<Ride> rides = new ArrayList<>();
-
-        rides.add(new Ride(
-                "UiTM Puncak Perdana → Shah Alam",
-                "5:30 PM",
-                3));
-
-        rides.add(new Ride(
-                "Subang → UiTM Puncak Perdana",
-                "8:00 AM",
-                2));
-
-        rides.add(new Ride(
-                "UiTM Puncak Perdana → Melaka Sentral",
-                "6:00 PM",
-                4));
-
         rvRides.setLayoutManager(new LinearLayoutManager(this));
 
-        RideAdapter adapter = new RideAdapter(this, rides);
-
+        // Set up adapter with empty list first
+        adapter = new RideAdapter(this, rides);
         rvRides.setAdapter(adapter);
+
+        // Get token from SharedPreferences
+        SharedPrefManager spm = new SharedPrefManager(getApplicationContext());
+        User user = spm.getUser();
+        String token = user.getToken();
+
+        // Get ride service instance
+        rideService = ApiUtils.getRideService(); // Bug 1 fixed: was "RideService =" (capital R)
+
+        // Execute the call
+        rideService.getAllRides(token).enqueue(new Callback<List<Ride>>() {
+            @Override
+            public void onResponse(Call<List<Ride>> call, Response<List<Ride>> response) {
+                Log.d("MyApp:", "Response: " + response.raw().toString());
+
+                if (response.code() == 200) {
+                    rides.clear();
+                    rides.addAll(response.body());
+                    adapter.notifyDataSetChanged(); // Bug 2 fixed: adapter was never told to refresh
+                } else {
+                    Toast.makeText(ViewRidesActivity.this, "Error: " + response.message(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Ride>> call, Throwable t) {
+                Toast.makeText(ViewRidesActivity.this, "Failed to connect", Toast.LENGTH_SHORT).show();
+                Log.e("MyApp:", t.toString());
+            }
+        });
     }
 }

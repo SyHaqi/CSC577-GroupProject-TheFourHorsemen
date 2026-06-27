@@ -6,6 +6,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     private static Retrofit retrofit = null;
 
+    /**
+     * Return instance of retrofit
+     * @param URL REST API URL
+     * @return retrofit instance
+     */
+
     public static Retrofit getClient(String URL) {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
