@@ -1,4 +1,4 @@
-package com.haqi.csc577groupproject.model;
+package com.haqi.csc577groupproject;
 
 public class Ride {
 
