@@ -31,13 +31,5 @@
         android:textColor="#555555"
         android:layout_marginTop="2dp"/>
 
-    <Button
-        android:id="@+id/bookBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Book Ride"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="@color/blue_primary"
-        android:layout_marginTop="8dp"/>
 
 </LinearLayout>

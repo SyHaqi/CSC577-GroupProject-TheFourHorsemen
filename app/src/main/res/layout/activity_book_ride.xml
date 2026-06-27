@@ -106,6 +106,15 @@
                     android:textSize="16sp"
                     android:textColor="#1A1A1A" />
 
+                <Button
+                    android:id="@+id/btnViewMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View on Map"
+                    android:backgroundTint="@color/blue_primary"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"/>
+
             </LinearLayout>
 
             <TextView

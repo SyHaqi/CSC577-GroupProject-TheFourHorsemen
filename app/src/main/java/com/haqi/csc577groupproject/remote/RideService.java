@@ -16,4 +16,5 @@ public interface RideService {
 
     @GET("rides/{id}")
     Call<Ride> getRide(@Header("api-key") String api_key, @Path("id") int id);
+
 }

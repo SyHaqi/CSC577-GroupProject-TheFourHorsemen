@@ -5,9 +5,11 @@ import com.haqi.csc577groupproject.model.User;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface UserService {
 
@@ -28,4 +30,7 @@ public interface UserService {
     Call<User> updateProfile(@Header("Authorization") String token,
                              @Field("email") String email,
                              @Field("phone") String phone);
+
+    @GET("users/{id}")
+    Call<User> getUser(@Header("api-key") String token, @Path("id") int id);
 }

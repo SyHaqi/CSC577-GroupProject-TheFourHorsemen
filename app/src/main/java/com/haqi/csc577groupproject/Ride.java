@@ -6,8 +6,8 @@ public class Ride {
     private int driver_id;
     private String origin;
     private String destination;
-    private String departure_Time;
-    private int available_Seats;
+    private String departure_time;
+    private int available_seats;
 
     public Ride() {
     }
@@ -17,8 +17,8 @@ public class Ride {
         this.driver_id = driver_id;
         this.origin = origin;
         this.destination = destination;
-        this.departure_Time = departure_Time;
-        this.available_Seats = available_Seats;
+        this.departure_time = departure_Time;
+        this.available_seats = available_Seats;
     }
 
     public int getRide_id() {
@@ -54,18 +54,18 @@ public class Ride {
     }
 
     public String getDeparture_Time() {
-        return departure_Time;
+        return departure_time;
     }
 
     public void setDeparture_Time(String departure_Time) {
-        this.departure_Time = departure_Time;
+        this.departure_time = departure_Time;
     }
 
     public int getAvailable_Seats() {
-        return available_Seats;
+        return available_seats;
     }
 
     public void setAvailable_Seats(int available_Seats) {
-        this.available_Seats = available_Seats;
+        this.available_seats = available_Seats;
     }
 }

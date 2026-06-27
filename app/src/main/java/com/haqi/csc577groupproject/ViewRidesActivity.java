@@ -68,8 +68,12 @@ public class ViewRidesActivity extends AppCompatActivity {
 
                 if (response.code() == 200) {
                     rides.clear();
-                    rides.addAll(response.body());
-                    adapter.notifyDataSetChanged(); // Bug 2 fixed: adapter was never told to refresh
+                    for (Ride ride : response.body()) {
+                        if (ride.getAvailable_Seats() > 0) {
+                            rides.add(ride);
+                        }
+                    }
+                    adapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(ViewRidesActivity.this, "Error: " + response.message(), Toast.LENGTH_SHORT).show();
                 }
